@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Popppins', sans-serif;
+}
+
+html,body{
+  height: 100%;
+}
+
+@font-face {
+  font-family:rick-mortyFont;
+  src: url(fonts/get_schwifty.ttf);
+}
+
+body{
+  background: url(images/levelbg.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.container .game-rules{
+  width: 500px;
+  height: 600px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.container .game-rules .info{
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.container .game-rules:hover .info{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.container .instruction{
+  font-family: rick-mortyFont;
+  font-size: 3em;
+  color: #fff;
+  z-index: 1;
+}
+
+
+.container .game-rules .info p{
+  font-size: 1.6em;
+  color: #fff;
+  font-weight: 300;
+}
+
+.container .game-rules .info h3{
+  font-family: rick-mortyFont;
+  font-size: 3em;
+  color: #fff;
+  z-index: 1;
+}
+
+
+.home{
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  display: flex;
+  width: 150px;
+  height: 150px;
+
+  //rotate 
+  additive-symbols: transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+}
+
+.home:hover{
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}

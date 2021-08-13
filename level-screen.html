@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="level-screen.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+
+	</script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.js">
+
+	</script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+
+	</script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+	<a href="index.html">
+		<img class="home" src="images/portal.png" href="index.html" alt="">
+  </a>
+  
+  
+	<div class="container">
+		<div class="level-cards">
+			<div class="level-info">
+				<img src="images/level1.jpg" href="level1.html" alt="level1">
+        <!-- <h1>01</h1> -->
+        <h2>Level 1</h2>
+        <a id="btn" href="level1.html">Level 1</a>
+      </div>
+    </div>
+    <div class="level-cards">
+      <div class="level-info">
+        <img src="images/level2.jpg" alt="level1">
+        <!-- <h1>02</h1> -->
+        <h2>Level 2</h2>
+        <a id="btn" href="level2.html">Level 2</a>
+      </div>
+    </div>
+    <div class="level-cards">
+      <div class="level-info">
+        <img src="images/level3.png" alt="level1">
+        <!-- <h1>03</h1> -->
+        <h2>Level 3</h2>
+        <a id="btn" href="level3.html">Level 3</a>
+      </div>
+    </div>
+	</div>
+
+	<audio id="card-hover">
+		<source src="audio/rick-belching-rick-and-morty.mp3" type="audio/mp3">
+	</audio>
+		
+
+	<script src="level-screen.js"></script>
+  <script type="text/javascript" src="vanilla-tilt.js"></script>
+
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".level-cards"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 1,
+	  });
+  </script>
+
+</body>

@@ -1,0 +1,127 @@
+/*Jaleel Bennett*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+  font-family:rick-mortyFont;
+  src: url(fonts/get_schwifty.ttf);
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(images/rick.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+/*code take from a tutorial on youtube - link: https://www.youtube.com/watch?v=hv0rNxr1XXk&t=333s*/
+.container .level-cards{
+  width: 400px;
+  height: 500px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px)
+}
+
+/*code take from a tutorial on youtube - link: https://www.youtube.com/watch?v=hv0rNxr1XXk&t=333s*/
+.card-info{
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+/*code take from a tutorial on youtube - link: https://www.youtube.com/watch?v=hv0rNxr1XXk&t=333s*/
+h1{
+  position: absolute;
+  top: -40px;
+  right: 25px;
+  font-size: 8em;
+  color: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+h2{
+  font-family: rick-mortyFont;
+  font-size: 2rem;
+  color: white;
+  z-index: 1;
+}
+
+/*code take from a tutorial on youtube - link: https://www.youtube.com/watch?v=hv0rNxr1XXk&t=333s*/
+#btn{
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+img{
+  width: 300px;
+  height: 200px;
+  top: 40px;
+}
+
+.home{
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  display: flex;
+  width: 150px;
+  height: 150px;
+
+  //rotate 
+  additive-symbols: transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+}
+
+.home:hover{
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+
+/*Jaleel Bennett*/
+
+/*code take from a tutorial on youtube - link: https://www.youtube.com/watch?v=hv0rNxr1XXk&t=333s*/

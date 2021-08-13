@@ -1,0 +1,13 @@
+find a way to drag 
+
+
+grid size 
+
+
+
+<ul id="slide-out" class="sidenav">
+       <li><a class="waves-effect waves-light btn green">How to play</a></li>
+      <li><a class="waves-effect waves-light btn green">Hint</a></li>
+      <li><a class="waves-effect waves-light btn red">Help</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>

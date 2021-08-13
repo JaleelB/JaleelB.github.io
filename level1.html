@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="level1.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+
+	</script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.js">
+
+	</script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+
+</head>
+
+<body>
+	<a href="index.html">
+		<img class="home" src="images/portal.png" href="index.html" alt=""
+  </a>
+  <p> HOME</p>
+
+
+	<!-- about modal -->
+	<div id="about" class="modal">
+		<div class="modal-content">
+			<h4>About Game</h4>
+      <p>Hey Welcome to Rick and Morty Fan Craze Puzzle Slider. This game was created as one of many escape rooms to be apart of a giant collaboprative escape room for our externship's final project. This game was created and designed by Jaleel Bennett, Idris and Dante Ransom.</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
+		</div>
+	</div>
+
+  	<!-- help modal -->
+	<div id="help" class="modal">
+		<div class="modal-content">
+			<h4> Help</h4>
+      <p>The game begins with a main puzzle screen showing the scrambled images. Simply slide one or more puzzle pieces into the empty space to rearrange the pieces into the complete the puzzle. The user is provided with a single space at first. While playing, if you are lost trying to solve the puzzle you can get a hint of what the completed image  is. The next setting is the difficulty of the puzzle. TO begin the user chooses the difficulty level they would like to play at. The more rows and columns, the harder the puzzle will be to complete. This level has an image with a 3X3 grid</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
+		</div>
+	</div>
+
+  <!-- hint  modal -->
+	<div id="hint" class="modal">
+		<div class="modal-content">
+			<h4>Hint </h4>
+      <p>
+        How to complete the Second Row:
+
+        move block 4 to open spot 3
+        move block 6 to open spot 4
+        
+      </p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
+		</div>
+	</div>
+
+	<div class="nav">
+		<!-- Dropdown Trigger -->
+		<a class='sidenav-trigger btn red' href='#' data-target='sidenav'> <i class="material-icons">dehaze</i></a>
+
+		<!-- Dropdown Structure -->
+		<ul id='sidenav' class='sidenav'>
+					<li><a class="waves-effect waves-light btn red modal-trigger" href="level-screen.html">level</a></li>
+					<li><a class="waves-effect waves-light btn red modal-trigger" href="#about">About</a></li>
+          <li><a class="waves-effect waves-light btn red modal-trigger" href="level-screen.html">Next Escape Room</a></li>
+		</ul>
+  </div>
+
+
+
+
+	<div class="container vertical-center">
+			<div class="timer">
+				<!-- <h2>Time</h2> -->
+				<h3 class="vertical-center" id="displayTime">00:<span id= "time-left">00</span></h3>
+		</div>
+
+		<div class="game-box">
+			<center>
+				<div class="image-grid">
+          <img src="images/Meeseeks.png" id ="clue" style="width:200px; height:400px; display=block;">
+					<div class="row1"></div>
+					<div class="row2"></div>
+					<div class="row3"></div>
+          <div class="row4"></div>
+				</div>
+			</center>
+	  </div>
+   
+      <div class="player-progress">
+     <div class="gif-display">
+       <img id="gif-1" src="images/Gifs/Gif1.gif" alt="" style="display: none">
+       <img id="gif-2" src="images/Gifs/Gif2.gif" alt="" style="display: none">
+       <img id="gif-3" src="images/Gifs/Gif3.gif" alt="" style="display: none">
+     </div>
+   </div>
+  
+    <div class="menu-box">
+      <div class="menus">
+        <div class="content">
+          <p id="moves">Moves: </p>
+          <p id="level">Level: </p>
+          <a href="level2.html" >Reshuffle</a>
+          <a href="#help" class ="modal-trigger">Help</a>
+          <a href="#hint" class = "modal-trigger">Hint</a>
+          </div>
+        </div>
+	  </div>
+
+	</div> 
+
+
+    <!-- Dialogs -->
+    <div id="happrick-dialog" >
+        <p>Hey Player. Welcome To Rick and Mort Fan Craze Slider Puzzle. By clicking each puzzle piece, you will organize the pices to form the original image. The obective of the game is to solve the puzzle within the alloted time. Good luck</p>
+    </div>
+
+    <div id="losemorty-dialog" >
+        <p>Oh no you won! Slime Rick isn't going to be happy. I am so worthless! I couldn't even make you lose. Hurry to the next level before he comes back!</p>
+        <a href="level2.html" class="waves-effect waves-light btn-small red">Next Level</a>
+    </div>
+
+
+<!-- AUDIO -->
+    <audio id="wrong-click" >
+			<source src="audio/rick-laugh.mp3" type="audio/mpeg">
+		</audio>
+
+    <audio id="portal" >
+			<source src="audio/portal-gun-sound-effect.mp3" type="audio/mpeg">
+		</audio>
+    
+    <audio id="victory" >
+			<source src="audio/wubalubadubdubs-rick-and-morty.mp3" type="audio/mpeg">
+		</audio>
+
+
+	
+
+     <!-- Confetti Animation
+     Copyright (c) 2017 Brian Dombrowski bdombro@gmail.com
+
+      Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+      The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+      THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+     -->
+    <script src="https://rawgit.com/benevolenttech/jquery.confetti.js/master/jquery.confetti.js"></script>
+    <script src="level1.js"></script>
+
+
+  <script type="text/javascript" src="vanilla-tilt.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".timer"), {
+		  max: 25,
+		  speed: 400,
+	  });
+
+  </script>
+</body>
+</html>

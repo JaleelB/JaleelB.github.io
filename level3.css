@@ -1,0 +1,275 @@
+/*Jaleel Bennett*/
+body,html{
+  height: 100%;
+}
+.count-down{
+  font-size: 10px;
+  color:white;
+}
+
+#game-over{
+  color:red;
+}
+
+body{
+  background: url(images/high-rick.jpg);
+  background-repeat: no-repeat;
+  height: 100%; 
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1600px !important;
+  //width: 1600px !important;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.container .game-box{
+  width: 480px;
+  height: 480px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.container .timer{
+  width: 150px;
+  height: 400px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.container .menu-box{
+  width: 200px;
+  height: 400px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.container .menu-box .content{
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.container .menu-box .content p{
+  font-size:2em;
+  color: white;
+  font-weight: 300;
+}
+
+.container .menu-box .content a{
+  position: relative;
+  display: block;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+.container .timer h3{
+ position: absolute;
+ top: 35%;
+ right: 20px;
+ text-align: center;
+ font-size: 3em;
+ color: white;
+ pointer-events: none;
+}
+
+.container .player-progress{
+  width: 300px;
+  height: 200px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+#happyrick-dialog,#losemorty-dialog,#playerlosing-dialog{
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  display: none;
+}
+
+#happyrick-dialog p{
+  font-size:2em;
+  color: white;
+  font-weight: 300;
+}
+
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  /* -ms-transform: translateY(50%);
+  transform: trans2lateY(50%);   */
+}
+
+#square-1,#square-2,#square-3,#square-4,#square-5,#square-6,#square-7,#square-8,#square-9,#square-10,#square-11,#square-12,#square-13,#square-14,#square-15,#square-16{
+  display: table-cell;
+  width: 120px;
+  height: 120px;
+  border: 1px solid white;
+  background-image: url("images/poopybutthole.jpg");
+  cursor: pointer;
+  background-size: 480px 480px;
+}
+
+#square-1 {background-position: 0px 0px;}
+#square-2 {background-position: -120px 0px;}
+#square-3 {background-position: -240px 0px;}
+#square-4 {background-position: -360px 0px;}
+#square-5 {background-position: 0px -120px;}
+#square-6 {background-position: -120px -120px;}
+#square-7 {background-position: -240px -120px;}
+#square-8 {background-position:  -360px -120px;}
+#square-9 {background-position: 0px -240px;}
+#square-10 {background-position: -120px -240px;}
+#square-11 {background-position: -240px -240px;}
+#square-12 {background-position:  -360px -240px;}
+#square-13 {background-position: 0px -360px;}
+#square-14 {background-position: -120px -360px;}
+#square-15 {background-position: -240px -360px;}
+#square-16 {background-color: white; cursor: default; background-position:  -360px -360px;}  
+
+.empty{
+  background-image: none !important;
+  background-color: white;
+}
+
+h3,p,#tile-num{color: white;}
+
+#image-grid{
+  ///display: table;
+  background-color: white;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4.0px );
+  -webkit-backdrop-filter: blur( 4.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.empty p{color:black;}
+
+
+.rick{
+  width: 100px;
+  height: 200px;
+  position: fixed;
+  bottom: 200px;
+  right: 200px;
+}
+
+
+/*Jaleel Bennett*/
+.home{
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  display: flex;
+  width: 150px;
+  height: 150px;
+
+  //rotate additive-symbols: transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+}
+
+.home:hover{
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+
+.sidenav-trigger{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  width: 50px;
+  height: 50px;
+}
+
+.modal{
+  height: 400px;
+  background-color: rgb(58, 58, 58);
+  will-change: top, opacity; 
+ 
+}
+
+.modal .modal-footer{
+  background-color:rgb(58, 58, 58);
+}
+ 
+ .modal-content p{
+   color: black;
+   font-size: 1.6em;
+ }
+
+#gif-1,#gif-2,#gif-3{
+  width: 300px;
+  height: 200px;
+}
+
+#confettiCanvas{
+  z-index: -1 !important;
+}

@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Popppins', sans-serif;
+}
+
+html,body{
+  height: 100%;
+}
+
+@font-face {
+  font-family:rick-mortyFont;
+  src: url(fonts/get_schwifty.ttf);
+}
+
+body{
+  background: url(images/demorg.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.container .about{
+  width: 500px;
+  height: 600px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.container .about .info{
+  padding: 20px;
+  text-align: center;
+}
+
+
+.container .about .info p{
+  font-size: 2em;
+  color: rgba(255, 42, 0, 0.952);
+  font-weight: 300;
+}
+
+.container .about .info h3{
+  font-family: rick-mortyFont;
+  font-size: 4em;
+  color: rgba(255, 42, 0, 0.952);
+  z-index: 1;
+}
+
+.container .about-creators{
+  width: 300px;
+  height: 600px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.container .about-creators .info{
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s;
+  /* opacity: 0; */
+}
+
+.container .about-creators .info p{
+  font-size: 2em;
+  color: rgba(255, 42, 0, 0.952);
+  font-weight: 300;
+}
+
+.container .about-creators .info h3{
+  font-family: rick-mortyFont;
+  font-size: 4em;
+  color: rgba(255, 42, 0, 0.952);
+  z-index: 1;
+}
+
+
+.home{
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  display: flex;
+  width: 150px;
+  height: 150px;
+
+  //rotate 
+  additive-symbols: transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+}
+
+.home:hover{
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   opacity: 0.5;
+}
+
+.footer p{
+  //font-family: rick-mortyFont;
+  font-size: 2em;
+  display: inline;
+  padding: 20px;
+}
+
+
